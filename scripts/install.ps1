@@ -37,14 +37,6 @@
         Write-Host "Extracting to $installDir ..."
         Expand-Archive -LiteralPath $zipPath -DestinationPath $installDir -Force
 
-        # Remove macOS metadata that may be included in the archive.
-        $macosx = Join-Path $installDir '__MACOSX'
-        if (Test-Path -LiteralPath $macosx) {
-            Remove-Item -LiteralPath $macosx -Recurse -Force
-        }
-        Get-ChildItem -LiteralPath $installDir -Recurse -Force -Filter '.DS_Store' |
-            Remove-Item -Force
-
         Write-Host "Cowppuccin installed to $installDir" -ForegroundColor Green
     }
     catch {
