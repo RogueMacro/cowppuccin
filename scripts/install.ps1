@@ -1,7 +1,7 @@
 # Installs the latest Cowppuccin theme release for the Beef IDE.
 #
 # Usage:
-#   irm https://raw.githubusercontent.com/RogueMacro/cowppuccin/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/RogueMacro/cowppuccin/main/scripts/install.ps1 | iex
 
 & {
     $ErrorActionPreference = 'Stop'
